@@ -1,0 +1,48 @@
+<div class="col-lg-2 text-center" style="position: fixed; top: 3.2vw; background: black; height:100vw; padding:0.2vw">
+    <div class="logo">
+        <a href="/" class="simple-text logo-mini">
+            <div class="logo-img"><img src="./assets/img/covid.png" /></div>
+        </a>
+        <a href="/" class="simple-text logo-normal">Covid India@2020</a>
+    </div>
+    <hr>
+    <label for="selectedScale">Select Parameter</label>
+    <select id="selectedScale">
+                <option > Confirmed Cases</option><option >Reported Deaths</option>
+                </select>
+    <label for="selectedScale">Select Scale</label>
+    <select id="selectedScale"><option>Logarithimic</option><option >Linear</option>
+                </select>
+    <label for="selectedScale">Indian States</label>
+    <input class="form-control search" type="text" [(ngModel)]="searchText" placeholder="Search For A Location" style="background-color: white; color: black" autocomplete="off">
+    <div class="buttonswrapper">
+        <button (click)="onDeSelectAll($event)" aria-Label="Deselect All Regions" style="margin-right: 0.1vw;">Deselect All</button>
+        <button (click)="onSelectAll($event)" aria-Label="Select All Regions">Select All</button>
+    </div>
+    <ul class="states">
+        <div *ngFor="let state of visibleStates | filter:searchText">
+            <label class="checkbox" style="font-size:0.9vw">
+                        <input type="checkbox" value="{{state.name}}" (change)="onItemSelect($event)" [checked]="state.checked"> 
+                          {{state.name}}
+                        </label>
+        </div>
+    </ul>
+</div>
+<div class="heading">
+    <p> The chart shows trajectory of Indian States Covid-19 Cases. By comparing the trajectories of 36 states we are able to see a clearer picture of how quickly the virus is spreading within various states. Data provided by
+        <a href="https://api.covid19india.org/" target="_blank">Covid19India</a> A volunteer-driven, crowdsourced database for COVID-19. <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" target="_blank">#StaySafe</a>
+    </p>
+</div>
+
+<div class="col-lg-10 col-xs-offset-2" style="height: 100%;">
+    <div class="chart-area">
+        <div #plotContainer id="embeddingsPlotID" (window:resize)="onResize()">
+        </div>
+        <div class="copyright" style="float: right;">
+            &copy; {{ footerDate | date: "yyyy" }} <a href="https://www.linkedin.com/in/maarif1430/" target="_blank"> Arif Malik </a>
+        </div>
+        <div style="float: left; font-size:1vw; color: white; font-style: italic">
+            Hover over graph to see total confirmed cases and cases in past week. Source code available on <a href="https://github.com/Aarif1430/India-Covid-19-Trajectories">GitHub.</a>
+        </div>
+    </div>
+</div>

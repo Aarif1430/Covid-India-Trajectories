@@ -1,0 +1,92 @@
+body {
+    font-size: 1vw;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #444;
+    text-rendering: optimizeLegibility;
+}
+
+.chart-area {
+    width: 82vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.copyright {
+    font-size: 1vw;
+    color: white;
+}
+
+.buttonswrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1vw;
+}
+
+button {
+    padding: 0.2vw;
+    font-size: 1vw;
+    text-align: center;
+    width: 7vw;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    background-color: #403326;
+    color: lightgoldenrodyellow;
+    border-radius: 0.39vw;
+}
+
+a {
+    color: blue($color: rgb(1, 1, 65));
+    text-decoration: underline;
+}
+
+.heading {
+    background: linear-gradient(to bottom, #000066 0%, #006666 100%);
+    width: 100%;
+    color: white;
+    font-style: italic;
+    font-size: 1.1vw;
+}
+
+.search {
+    width: 12vw;
+    display: flex;
+    flex-direction: row;
+    // min-width: 3vw;
+    height: 2.5vw;
+    font-size: 1vw;
+    margin-left: 1.2vw;
+}
+
+.search>input {
+    flex: 1;
+    font-size: 0.75vw;
+    padding: 0.5vw;
+    margin-top: 0.5vw;
+    width: 9vw;
+}
+
+.states {
+    height: 25vw;
+    overflow-y: scroll;
+    text-align: justify;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.6vw;
+    font-size: 1.1vw;
+    color: darkgrey;
+}
+
+#selectedScale {
+    min-width: 12vw;
+    font-size: 1.2vw;
+    // padding: 0.5vw;
+    margin-right: 2vw;
+    margin-bottom: 1vw;
+}
+
+text.updatemenu-item-text.user-select-none {
+    fill: white !important;
+}

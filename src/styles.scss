@@ -1,0 +1,40 @@
+.logo-img {
+    width: 3vw;
+    height: 3vw;
+    display: block;
+    margin-left: 0.1vw;
+    position: absolute;
+    top: 0.57vw;
+    img {
+        width: 3vw;
+    }
+}
+
+.simple-text {
+    text-transform: uppercase;
+    padding: 0.7vw 0;
+    display: block;
+    white-space: nowrap;
+    font-size: 1vw;
+    color: darkgrey;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 3vw;
+    overflow: hidden;
+}
+
+a.logo-mini {
+    opacity: 1;
+    float: left;
+    width: 1vw;
+    text-align: center;
+    margin-right: 1.2vw;
+}
+
+hr {
+    margin-top: 0vw;
+}
+
+text.updatemenu-item-text.user-select-none {
+    fill: white !important;
+}
