@@ -4,7 +4,7 @@
 
 
 # Dashboard
-![Dashboard](https://github.com/Aarif1430/Covid-India-Trajectories/tree/master/src/assets/img/dashboard.png)
+![Dashboard](https://github.com/Aarif1430/Covid-India-Trajectories/blob/master/src/assets/dashboard.png)
 
 ## Setup
 
